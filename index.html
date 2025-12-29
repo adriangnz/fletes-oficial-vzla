@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Fletes Oficial Vzla | Transporte y Mudanzas Seguras en Chile</title>
+    <meta name="description"
+        content="Servicio profesional de fletes y mudanzas en Chile. Transporte seguro de carga, mudanzas residenciales y comerciales. Cotiza gratis por WhatsApp. Disponibles 24/7.">
+    <meta name="keywords"
+        content="fletes chile, mudanzas chile, transporte de carga, mudanzas residenciales, fletes comerciales, encomiendas express, transporte seguro, mudanzas santiago">
+    <meta name="author" content="Fletes Oficial Vzla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fletesoficialvzla.cl/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fletesoficialvzla.cl/">
+    <meta property="og:title" content="Fletes Oficial Vzla | Transporte y Mudanzas Seguras">
+    <meta property="og:description"
+        content="Servicio profesional de fletes y mudanzas en Chile. Transporte seguro, puntual y confiable. Cotiza gratis por WhatsApp.">
+    <meta property="og:image" content="https://fletesoficialvzla.cl/assets/logo.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="Fletes Oficial Vzla">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fletesoficialvzla.cl/">
+    <meta name="twitter:title" content="Fletes Oficial Vzla | Transporte y Mudanzas Seguras">
+    <meta name="twitter:description"
+        content="Servicio profesional de fletes y mudanzas en Chile. Transporte seguro, puntual y confiable.">
+    <meta name="twitter:image" content="https://fletesoficialvzla.cl/assets/logo.png">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#10b981">
+    <meta name="geo.region" content="CL-RM">
+    <meta name="geo.placename" content="Santiago, Chile">
+    <meta name="language" content="Spanish">
+
+    <!-- Fuente Inter (Esencial para el look de Shadcn) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos Lucide (Estilo Shadcn) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "#10b981", // Verde Esmeralda de la marca
+                            foreground: "#ffffff",
+                            dark: "#059669",
+                        },
+                        secondary: {
+                            DEFAULT: "#f4f4f5",
+                            foreground: "#18181b",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "#f4f4f5",
+                            foreground: "#71717a",
+                        },
+                        accent: {
+                            DEFAULT: "#f4f4f5",
+                            foreground: "#18181b",
+                        },
+                        card: {
+                            DEFAULT: "#ffffff",
+                            foreground: "#09090b",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Variables CSS para simular el sistema de Shadcn */
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 240 10% 3.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 240 10% 3.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 240 10% 3.9%;
+            --primary: 151 55% 41.5%;
+            --primary-foreground: 355.7 100% 97.3%;
+            --secondary: 240 4.8% 95.9%;
+            --secondary-foreground: 240 5.9% 10%;
+            --muted: 240 4.8% 95.9%;
+            --muted-foreground: 240 3.8% 46.1%;
+            --accent: 240 4.8% 95.9%;
+            --accent-foreground: 240 5.9% 10%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 5.9% 90%;
+            --input: 240 5.9% 90%;
+            --ring: 142.1 76.2% 36.3%;
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-feature-settings: "rlig" 1, "calt" 1;
+        }
+
+        /* Utilidades extra */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Estilos de Formulario Shadcn */
+        .shad-input {
+            height: 2.5rem;
+            width: 100%;
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--input));
+            background-color: transparent;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .shad-input:focus {
+            outline: none;
+            ring: 2px solid hsl(var(--ring));
+            border-color: hsl(var(--ring));
+        }
+
+        .shad-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Estilos mejorados para el Select */
+        select.shad-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.25rem;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        select.shad-input:hover {
+            border-color: #10b981;
+            background-color: rgba(16, 185, 129, 0.02);
+        }
+
+        select.shad-input:focus {
+            background-color: white;
+        }
+
+        /* Estilos para las opciones del select */
+        select.shad-input option {
+            padding: 0.75rem;
+            background-color: white;
+            color: #09090b;
+            font-size: 0.875rem;
+        }
+
+        select.shad-input option:hover,
+        select.shad-input option:checked {
+            background-color: #10b981;
+            color: white;
+        }
+
+        /* Custom Select Shadcn Style */
+        .custom-select {
+            position: relative;
+            width: 100%;
+        }
+
+        .custom-select-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 2.5rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            border: 1px solid hsl(var(--input));
+            border-radius: var(--radius);
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .custom-select-trigger:hover {
+            border-color: #10b981;
+            background-color: rgba(16, 185, 129, 0.02);
+        }
+
+        .custom-select-trigger:focus,
+        .custom-select-trigger.open {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+        }
+
+        .custom-select-trigger .placeholder {
+            color: #71717a;
+        }
+
+        .custom-select-trigger .value {
+            color: #09090b;
+        }
+
+        .custom-select-icon {
+            width: 1rem;
+            height: 1rem;
+            transition: transform 0.2s;
+            color: #71717a;
+        }
+
+        .custom-select-trigger.open .custom-select-icon {
+            transform: rotate(180deg);
+        }
+
+        .custom-select-dropdown {
+            position: fixed;
+            z-index: 9999;
+            max-height: 15rem;
+            overflow-y: auto;
+            background-color: white;
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(-0.5rem);
+            pointer-events: none;
+            transition: all 0.2s;
+            min-width: 200px;
+        }
+
+        .custom-select-dropdown.open {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .custom-select-option {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            color: #09090b;
+        }
+
+        .custom-select-option:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+
+        .custom-select-option.selected {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            font-weight: 500;
+        }
+
+        .custom-select-option:first-child {
+            border-top-left-radius: var(--radius);
+            border-top-right-radius: var(--radius);
+        }
+
+        .custom-select-option:last-child {
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-nav:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .gallery-image {
+            cursor: pointer;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 1.5rem;
+        }
+
+        .carousel-slide {
+            flex: 0 0 calc((100% - (1.5rem * 2)) / 3);
+            width: calc((100% - (1.5rem * 2)) / 3);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .carousel-slide {
+                flex: 0 0 calc((100% - 1.5rem) / 2);
+                width: calc((100% - 1.5rem) / 2);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .carousel-slide {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: #10b981;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .carousel-button:hover {
+            background-color: #10b981;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-button-prev {
+            left: -24px;
+        }
+
+        .carousel-button-next {
+            right: -24px;
+        }
+
+        .carousel-button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .carousel-button:disabled:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #10b981;
+            transform: translateY(-50%);
+        }
+
+        /* Fix para que el overlay no bloquee clicks */
+        .image-overlay {
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17810439012"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-17810439012'); </script>
+
+    <!-- Event snippet for Contacto conversion page -->
+    <script> gtag('event', 'conversion', { 'send_to': 'AW-17810439012/cg0gCO-uqNQbEOT21qxC' }); </script>
+</head>
+
+<body class="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary-dark">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 glass-nav">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="assets/logo.png" alt="Fletes Oficial Vzla Logo"
+                    class="w-10 h-10 object-contain rounded-lg transform group-hover:scale-105 transition-transform">
+                <span class="font-bold text-lg tracking-tight">Fletes Oficial Vzla</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
+                <a href="#inicio" class="hover:text-foreground transition-colors">Inicio</a>
+                <a href="#servicios" class="hover:text-foreground transition-colors">Servicios</a>
+                <a href="#galeria" class="hover:text-foreground transition-colors">Flota</a>
+                <a href="#contacto" class="hover:text-foreground transition-colors">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contacto"
+                class="hidden md:inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary-dark h-9 px-4 py-2 shadow-sm">
+                <i data-lucide="calculator" class="w-4 h-4 mr-2"></i>
+                Cotizar Ahora
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 text-muted-foreground"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden absolute top-16 left-0 w-full bg-white border-b border-border p-4 md:hidden shadow-lg">
+            <nav class="flex flex-col gap-4">
+                <a href="#inicio" class="text-sm font-medium py-2 border-b border-border/50">Inicio</a>
+                <a href="#servicios" class="text-sm font-medium py-2 border-b border-border/50">Servicios</a>
+                <a href="#galeria" class="text-sm font-medium py-2 border-b border-border/50">Nuestra Flota</a>
+                <a href="#contacto" class="w-full bg-primary text-white text-center py-3 rounded-md font-medium">
+                    Solicitar Cotización
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-10 md:pt-48 md:pb-16 px-4 relative overflow-hidden">
+        <!-- Background Pattern Decorativo -->
+        <div class="absolute top-0 right-0 -z-10 opacity-5 transform translate-x-1/3 -translate-y-1/4">
+            <svg width="800" height="800" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#10b981"
+                    d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.4,70.6,31.4C59,41.4,47.1,48.6,35.3,53.4C23.5,58.2,11.8,60.6,-1.3,62.9C-14.4,65.2,-30.9,67.4,-44.6,61.8C-58.3,56.2,-69.2,42.8,-76.2,27.8C-83.2,12.8,-86.3,-3.8,-81.7,-18.2C-77.1,-32.6,-64.8,-44.8,-51.7,-52.3C-38.6,-59.8,-24.7,-62.6,-11.1,-60.7C2.5,-58.8,16,-52.2,30.5,-83.6L44.7,-76.4Z"
+                    transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto max-w-5xl text-center">
+            <div
+                class="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                Disponibles 24/7
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-6">
+                Tu carga segura <br class="hidden md:block" />
+                <span class="text-primary relative">
+                    a tiempo y destino
+                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary/20" viewBox="0 0 100 10"
+                        preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                    </svg>
+                </span>
+            </h1>
+
+            <p class="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+                Expertos en mudanzas residenciales, fletes comerciales y transporte de carga. Cuidamos tus pertenencias
+                como si fueran nuestras.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contacto"
+                    class="w-full sm:w-auto inline-flex items-center justify-center rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary-dark h-12 px-8 shadow-lg shadow-primary/25">
+                    <i data-lucide="truck" class="mr-2 h-5 w-5"></i>
+                    Cotizar Flete
+                </a>
+                <a href="#servicios"
+                    class="w-full sm:w-auto inline-flex items-center justify-center rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8">
+                    Ver Servicios
+                </a>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="mt-12 flex items-center justify-center gap-6 text-muted-foreground grayscale opacity-70">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    <span class="text-sm font-medium">Carga Asegurada</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                    <span class="text-sm font-medium">Puntualidad</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <span class="text-sm font-medium">Atención Dedicada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="pt-20 pb-8 bg-background">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Soluciones de Transporte</h2>
+                <p class="text-muted-foreground text-lg">Adaptamos nuestros vehículos y personal a tus necesidades
+                    específicas de carga. Trabajamos en toda la Región Metropolitana de Santiago.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Service Card 1 -->
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="truck" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Mudanzas</h3>
+                        <p class="text-muted-foreground">Servicio completo de mudanza residencial y particular. Carga,
+                            transporte y descarga con el máximo cuidado para tus pertenencias.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="building-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fletes Comerciales</h3>
+                        <p class="text-muted-foreground">Transporte de mercadería para empresas y oficinas. Cumplimos
+                            con tus plazos de entrega.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="rounded-xl border border-border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="package" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Encomiendas Express</h3>
+                        <p class="text-muted-foreground">Retiro y entrega de paquetes pequeños o medianos con rapidez
+                            dentro de la región.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Real de Flota -->
+    <section id="galeria" class="pt-20 pb-8 bg-secondary/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-2">Nuestra Flota y Servicios</h2>
+                <p class="text-muted-foreground">Fotos reales de nuestros camiones y trabajos realizados.</p>
+            </div>
+
+            <!-- Carrusel de Imágenes -->
+            <div class="relative">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div
+                                class="group relative aspect-[3/2] overflow-hidden rounded-xl bg-gray-100 border border-border shadow-sm">
+                                <img src="assets/vehiculos_disposicion.png"
+                                    data-fallback="https://placehold.co/600x400/10b981/ffffff?text=Flota+Moderna"
+                                    alt="Vehículos a Disposición"
+                                    class="gallery-image object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
+                                <div
+                                    class="image-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                                    <span class="text-white font-medium text-sm">Vehículos a Disposición</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div
+                                class="group relative aspect-[3/2] overflow-hidden rounded-xl bg-gray-100 border border-border shadow-sm">
+                                <img src="assets/IMG-20250508-WA0016.jpg"
+                                    data-fallback="https://placehold.co/600x400/09090b/ffffff?text=Carga+Segura"
+                                    alt="Servicio de Carga"
+                                    class="gallery-image object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
+                                <div
+                                    class="image-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                                    <span class="text-white font-medium text-sm">Servicio de Carga</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div
+                                class="group relative aspect-[3/2] overflow-hidden rounded-xl bg-gray-100 border border-border shadow-sm">
+                                <img src="assets/IMG-20250322-WA0058.jpg"
+                                    data-fallback="https://placehold.co/600x400/10b981/ffffff?text=Mudanza+Express"
+                                    alt="Mudanza Realizada"
+                                    class="gallery-image object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
+                                <div
+                                    class="image-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                                    <span class="text-white font-medium text-sm">Mudanza Realizada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <div
+                                class="group relative aspect-[3/2] overflow-hidden rounded-xl bg-gray-100 border border-border shadow-sm">
+                                <img src="assets/IMG-20250207-WA0028.jpg"
+                                    data-fallback="https://placehold.co/600x400/10b981/ffffff?text=Transporte+Seguro"
+                                    alt="Transporte Seguro"
+                                    class="gallery-image object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
+                                <div
+                                    class="image-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                                    <span class="text-white font-medium text-sm">Transporte Seguro</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide">
+                            <div
+                                class="group relative aspect-[3/2] overflow-hidden rounded-xl bg-gray-100 border border-border shadow-sm">
+                                <img src="assets/IMG-20241207-WA0008.jpeg"
+                                    data-fallback="https://placehold.co/600x400/09090b/ffffff?text=Flota+Profesional"
+                                    alt="Flota Profesional"
+                                    class="gallery-image object-cover w-full h-full transition-transform duration-500 group-hover:scale-110">
+                                <div
+                                    class="image-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                                    <span class="text-white font-medium text-sm">Flota Profesional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación -->
+                <button class="carousel-button carousel-button-prev" id="carouselPrev" aria-label="Anterior">
+                    ‹
+                </button>
+                <button class="carousel-button carousel-button-next" id="carouselNext" aria-label="Siguiente">
+                    ›
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto" class="pt-20 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="rounded-3xl bg-gray-900 text-white overflow-hidden shadow-2xl relative">
+                <!-- Decoración de fondo -->
+                <div
+                    class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-96 h-96 bg-primary/20 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl">
+                </div>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 p-8 md:p-12 items-start">
+
+                    <!-- Información Izquierda -->
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div
+                                class="inline-flex items-center rounded-md bg-white/10 px-3 py-1 text-sm font-medium text-primary mb-6 border border-white/10">
+                                Cotización Gratuita
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para moverte?</h2>
+                            <p class="text-gray-400 text-lg mb-8">
+                                Completa el formulario y te enviaremos a WhatsApp con toda la información lista para
+                                darte un precio exacto al instante.
+                            </p>
+
+                            <div class="space-y-6">
+                                <!-- WhatsApp Link con QR Tooltip -->
+                                <div class="relative group">
+                                    <a href="https://wa.me/56965689082" target="_blank"
+                                        class="flex items-center gap-4 hover:bg-white/5 p-2 -ml-2 rounded-xl transition-colors relative z-10">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 transition-colors">
+                                            <i data-lucide="message-circle" class="w-6 h-6 text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400 group-hover:text-primary transition-colors">
+                                                WhatsApp</p>
+                                            <p class="font-medium text-lg text-white">+56 9 6568 9082</p>
+                                        </div>
+                                    </a>
+
+                                    <!-- Tooltip QR (Visible on Hover) -->
+                                    <div
+                                        class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 p-2 bg-white rounded-xl shadow-xl z-20 w-40">
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/56965689082"
+                                            alt="QR WhatsApp" class="w-full h-auto rounded-lg">
+                                        <p class="text-black text-[10px] text-center mt-1 font-medium">Escanear para
+                                            chatear</p>
+                                        <!-- Triángulo del tooltip -->
+                                        <div
+                                            class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-8 border-transparent border-t-white">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botón de Llamar -->
+                                <a href="tel:+56965689082"
+                                    class="flex items-center gap-4 hover:bg-white/5 p-2 -ml-2 rounded-xl transition-colors group">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                                        <i data-lucide="phone" class="w-6 h-6 text-primary group-hover:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 group-hover:text-white transition-colors">Llamar
+                                            por Teléfono</p>
+                                        <p class="font-medium text-lg text-white">Llamar Ahora</p>
+                                    </div>
+                                </a>
+
+                                <!-- Cobertura -->
+                                <div class="flex items-center gap-4 p-2 -ml-2">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400">Cobertura</p>
+                                        <p class="font-medium text-lg">Región Metropolitana de Santiago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="mt-12 p-4 rounded-xl bg-primary/10 border border-primary/20">
+                            <p class="text-sm text-primary-foreground/90">
+                                "Excelente servicio, llegaron puntuales y trataron mis muebles con mucho cuidado. 100%
+                                recomendados."
+                            </p>
+                            <p class="text-xs text-primary mt-2 font-bold">- Cliente Satisfecho</p>
+                        </div> -->
+                    </div>
+
+                    <!-- Formulario Derecha -->
+                    <div class="bg-white p-6 md:p-8 rounded-2xl text-gray-900 shadow-xl">
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            <i data-lucide="clipboard-list" class="w-5 h-5 text-primary"></i>
+                            Detalles del Servicio
+                        </h3>
+
+                        <form id="whatsappForm" class="space-y-4">
+                            <!-- Nombre -->
+                            <div class="space-y-2">
+                                <label for="nombre" class="shad-label text-gray-700">Tu Nombre</label>
+                                <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required
+                                    class="shad-input focus:border-primary focus:ring-primary/20">
+                            </div>
+
+                            <!-- Correo (Opcional) -->
+                            <div class="space-y-2">
+                                <label for="email" class="shad-label text-gray-700">Correo Electrónico <span
+                                        class="text-gray-400 font-normal">(Opcional)</span></label>
+                                <input type="email" id="email" placeholder="correo@ejemplo.com"
+                                    class="shad-input focus:border-primary focus:ring-primary/20">
+                            </div>
+
+                            <!-- Origen -->
+                            <div class="space-y-2">
+                                <label for="origen" class="shad-label text-gray-700">¿De dónde retiramos?</label>
+                                <input type="text" id="origen" placeholder="Ej: Santiago Centro" required
+                                    class="shad-input focus:border-primary focus:ring-primary/20">
+                            </div>
+
+                            <!-- Destino -->
+                            <div class="space-y-2">
+                                <label for="destino" class="shad-label text-gray-700">¿A dónde vamos?</label>
+                                <input type="text" id="destino" placeholder="Ej: Viña del Mar" required
+                                    class="shad-input focus:border-primary focus:ring-primary/20">
+                            </div>
+
+                            <!-- Tipo de Servicio (Custom Select Shadcn Style) -->
+                            <div class="space-y-2">
+                                <label class="shad-label text-gray-700">Tipo de Servicio</label>
+                                <div class="custom-select" id="customSelect">
+                                    <div class="custom-select-trigger" tabindex="0" role="button"
+                                        aria-haspopup="listbox">
+                                        <span class="value">Mudanza de Casa / Depto</span>
+                                        <svg class="custom-select-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="custom-select-dropdown" role="listbox">
+                                        <div class="custom-select-option selected" data-value="Mudanza de Casa"
+                                            role="option">Mudanza de Casa / Depto</div>
+                                        <div class="custom-select-option" data-value="Flete Pequeño" role="option">Flete
+                                            Pequeño / Muebles</div>
+                                        <div class="custom-select-option" data-value="Flete Comercial" role="option">
+                                            Carga Comercial / Oficina</div>
+                                        <div class="custom-select-option" data-value="Encomienda" role="option">
+                                            Encomienda Express</div>
+                                        <div class="custom-select-option" data-value="Otro" role="option">Otro /
+                                            Consulta General</div>
+                                    </div>
+                                    <!-- Hidden input para mantener el valor seleccionado -->
+                                    <input type="hidden" id="tipo" name="tipo" value="Mudanza de Casa">
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all flex items-center justify-center gap-2 mt-2">
+                                Cotizar en WhatsApp
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+
+                            <p class="text-xs text-center text-gray-500 mt-4">
+                                Al enviar, serás redirigido a WhatsApp Web o App.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Radio (Separada) -->
+    <section class="py-12 bg-gradient-to-b from-gray-50 to-white border-y border-border/20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div
+                    class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-3">
+                    <i data-lucide="radio" class="w-4 h-4 mr-2"></i>
+                    Escucha Nuestra Radio
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-900 text-white p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto shadow-2xl border border-gray-800">
+
+                <!-- Info Estación -->
+                <div class="flex items-center gap-5">
+                    <div class="relative w-20 h-20 flex-shrink-0 group cursor-pointer" onclick="toggleRadio()">
+                        <img src="https://chronosiradio.online/wp-content/uploads/2025/09/chronos-iradio2-1.png"
+                            alt="Chronos IRadio"
+                            class="w-full h-full object-cover rounded-2xl border-2 border-primary/40 group-hover:border-primary transition-all shadow-xl shadow-primary/20"
+                            id="radio-logo">
+                        <div class="absolute -bottom-2 -right-2 bg-black rounded-full p-1.5 border border-primary/30">
+                            <div class="flex gap-0.5 items-end h-3.5 w-3.5 justify-center">
+                                <div class="w-0.5 bg-primary h-2 animate-pulse"></div>
+                                <div class="w-0.5 bg-primary h-3 animate-pulse delay-75"></div>
+                                <div class="w-0.5 bg-primary h-2 animate-pulse delay-150"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl tracking-wide text-white mb-1">Chronos IRadio</h4>
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                            </span>
+                            <p id="radio-status" class="text-sm text-gray-300">En Pausa - Haz clic para escuchar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <div class="flex items-center gap-6 w-full md:w-auto justify-center">
+                    <!-- Play/Pause Big Button -->
+                    <button id="radio-toggle" onclick="toggleRadio()"
+                        class="w-16 h-16 rounded-full bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-all shadow-2xl shadow-primary/30 hover:scale-110 active:scale-95 group">
+                        <i data-lucide="play" class="w-7 h-7 fill-current ml-1" id="icon-play"></i>
+                        <i data-lucide="pause" class="w-7 h-7 fill-current hidden" id="icon-pause"></i>
+                    </button>
+
+                    <!-- Volume -->
+                    <div class="flex items-center gap-3 bg-white/10 px-5 py-3 rounded-full backdrop-blur-sm">
+                        <i data-lucide="volume-2" class="w-5 h-5 text-gray-300"></i>
+                        <input type="range" min="0" max="1" step="0.1" value="0.3"
+                            class="w-28 h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary"
+                            oninput="setVolume(this.value)">
+                    </div>
+                </div>
+
+                <audio id="radio-audio" preload="none">
+                    <source src="https://stream.zeno.fm/1gy58o7wicquv" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">›</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightbox-image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-background py-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-lg">Fletes Oficial Vzla</span>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/fletesoficialvzla" target="_blank"
+                        class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                        title="Síguenos en Instagram">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-sm text-muted-foreground text-center md:text-right">
+                © 2026 Fletes Oficial Vzla <br> Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para renderizar iconos -->
+    <script>
+        lucide.createIcons();
+
+        // Manejo global de errores de imágenes (Fallback)
+        document.addEventListener('error', function (e) {
+            if (e.target.tagName.toLowerCase() === 'img' && e.target.dataset.fallback) {
+                e.target.src = e.target.dataset.fallback;
+                delete e.target.dataset.fallback;
+            }
+        }, true); // Fase de captura necesaria para eventos load/error
+
+        // Custom Select Shadcn Style Logic
+        const customSelect = document.getElementById('customSelect');
+        const trigger = customSelect.querySelector('.custom-select-trigger');
+        const dropdown = customSelect.querySelector('.custom-select-dropdown');
+        const options = customSelect.querySelectorAll('.custom-select-option');
+        const hiddenInput = customSelect.querySelector('#tipo');
+        const valueDisplay = trigger.querySelector('.value');
+
+        // Función para posicionar el dropdown
+        function positionDropdown() {
+            const rect = trigger.getBoundingClientRect();
+            dropdown.style.top = `${rect.bottom + 4}px`;
+            dropdown.style.left = `${rect.left}px`;
+            dropdown.style.width = `${rect.width}px`;
+        }
+
+        // Toggle dropdown
+        function toggleDropdown() {
+            const isOpen = dropdown.classList.contains('open');
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        }
+
+        function openDropdown() {
+            positionDropdown();
+            trigger.classList.add('open');
+            dropdown.classList.add('open');
+        }
+
+        function closeDropdown() {
+            trigger.classList.remove('open');
+            dropdown.classList.remove('open');
+        }
+
+        // Click en el trigger
+        trigger.addEventListener('click', toggleDropdown);
+
+        // Keyboard support
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        // Seleccionar opción
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const value = option.dataset.value;
+                const text = option.textContent;
+
+                // Actualizar valor
+                hiddenInput.value = value;
+                valueDisplay.textContent = text;
+
+                // Actualizar clases selected
+                options.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+
+                // Cerrar dropdown
+                closeDropdown();
+            });
+        });
+
+        // Cerrar al hacer click fuera
+        document.addEventListener('click', (e) => {
+            if (!customSelect.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        // Reposicionar en scroll y resize
+        window.addEventListener('scroll', () => {
+            if (dropdown.classList.contains('open')) {
+                positionDropdown();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (dropdown.classList.contains('open')) {
+                positionDropdown();
+            }
+        });
+
+        // Lightbox Gallery Logic
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        let currentImageIndex = 0;
+        const imagesSrc = Array.from(galleryImages).map(img => img.src);
+
+        // Abrir lightbox
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                showLightbox();
+            });
+        });
+
+        function showLightbox() {
+            lightboxImage.src = imagesSrc[currentImageIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + imagesSrc.length) % imagesSrc.length;
+            lightboxImage.src = imagesSrc[currentImageIndex];
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % imagesSrc.length;
+            lightboxImage.src = imagesSrc[currentImageIndex];
+        }
+
+        // Event listeners para lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrevImage);
+        lightboxNext.addEventListener('click', showNextImage);
+
+        // Cerrar con ESC y navegar con flechas
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+        });
+
+        // Cerrar al hacer click en el fondo
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Carousel Logic
+        const carouselTrack = document.getElementById('carouselTrack');
+        const carouselPrev = document.getElementById('carouselPrev');
+        const carouselNext = document.getElementById('carouselNext');
+        let currentSlide = 0;
+        const totalSlides = 5;
+        let slidesPerView = 3;
+
+        // Detectar cuántas slides mostrar según el ancho de pantalla
+        function updateSlidesPerView() {
+            if (window.innerWidth < 640) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const maxSlide = totalSlides - slidesPerView;
+
+            // Limitar currentSlide
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide > maxSlide) currentSlide = maxSlide;
+
+            // Mover el track considerando el gap de 1.5rem (24px)
+            // Usamos el ancho real del contenedor para el cálculo
+            const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+            const gap = 24; // 1.5rem en px
+
+            // Cada paso del carrusel es: (AnchoContenedor + Gap) / slidesPerView
+            const translateX = -(currentSlide * (containerWidth + gap) / slidesPerView);
+
+            carouselTrack.style.transform = `translateX(${translateX}px)`;
+
+            // Actualizar botones
+            carouselPrev.disabled = currentSlide === 0;
+            carouselNext.disabled = currentSlide >= maxSlide;
+        }
+
+        carouselPrev.addEventListener('click', () => {
+            currentSlide--;
+            updateCarousel();
+        });
+
+        carouselNext.addEventListener('click', () => {
+            currentSlide++;
+            updateCarousel();
+        });
+
+        // Actualizar en resize
+        window.addEventListener('resize', updateSlidesPerView);
+
+        // Inicializar
+        updateSlidesPerView();
+
+        // Touch Swipe Logic
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchEndX = e.touches[0].clientX; // Resetear al inicio
+        }, { passive: true });
+
+        carouselTrack.addEventListener('touchmove', (e) => {
+            touchEndX = e.touches[0].clientX;
+        }, { passive: true });
+
+        carouselTrack.addEventListener('touchend', () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Deslizar izquierda -> Siguiente
+                    const maxSlide = totalSlides - slidesPerView;
+                    if (currentSlide < maxSlide) {
+                        currentSlide++;
+                        updateCarousel();
+                    }
+                } else {
+                    // Deslizar derecha -> Anterior
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateCarousel();
+                    }
+                }
+            }
+        });
+
+
+        // Lógica del Formulario a WhatsApp
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evitar recarga
+
+            // Capturar valores
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const origen = document.getElementById('origen').value;
+            const destino = document.getElementById('destino').value;
+            const tipo = document.getElementById('tipo').value;
+
+            // Construir mensaje
+            let mensaje = `Hola *Fletes Oficial Vzla*, vengo de su página web y me gustaría cotizar:%0A%0A`;
+            mensaje += `👤 *Nombre:* ${nombre}%0A`;
+            if (email) mensaje += `📧 *Email:* ${email}%0A`;
+            mensaje += `🚚 *Servicio:* ${tipo}%0A`;
+            mensaje += `📍 *Origen:* ${origen}%0A`;
+            mensaje += `🏁 *Destino:* ${destino}%0A`;
+            mensaje += `%0A¿Me podrían indicar disponibilidad y precio aproximado? Gracias.`;
+
+            // Redirigir
+            const numeroTelefono = "56965689082";
+            const url = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
+
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+
+</html><!-- Reproductor de Radio Flotante (Glassmorphism) -->
+
+
+
+
+<script>
+    // Lógica del Reproductor
+    const audio = document.getElementById('radio-audio');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    const radioLogo = document.getElementById('radio-logo');
+    const radioStatus = document.getElementById('radio-status');
+
+    // Manejo de Play/Pause
+    function toggleRadio() {
+        if (audio.paused) {
+            audio.play().then(() => {
+                updateUI(true);
+            }).catch(e => {
+                console.error("Error al reproducir:", e);
+                radioStatus.innerText = "Error de conexión";
+            });
+        } else {
+            audio.pause();
+            updateUI(false);
+        }
+    }
+
+    function updateUI(isPlaying) {
+        if (isPlaying) {
+            iconPlay.classList.add('hidden');
+            iconPause.classList.remove('hidden');
+            radioStatus.innerText = "Transmitiendo en Vivo";
+            radioStatus.classList.add('text-primary');
+            radioStatus.classList.remove('text-gray-300');
+        } else {
+            iconPlay.classList.remove('hidden');
+            iconPause.classList.add('hidden');
+            radioStatus.innerText = "En Pausa";
+            radioStatus.classList.remove('text-primary');
+            radioStatus.classList.add('text-gray-300');
+        }
+    }
+
+    function setVolume(val) {
+        audio.volume = val;
+    }
+
+    // Establecer volumen inicial al 30%
+    audio.volume = 0.3;
+</script>
